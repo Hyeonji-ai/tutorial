@@ -35,6 +35,3 @@ for n in range(len(data.loc[0])):
         print(data_dic)
 
 print(data.head(5))
-
-
-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
