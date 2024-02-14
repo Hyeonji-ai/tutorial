@@ -1,12 +1,11 @@
 from queue import Queue
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-data = pd.read_csv()
+data = pd.read_csv() #input your data path
 
-#데이터를 사용하기 위해서는 맵핑해야함 그때 필요한 식
 for n in range(len(data.loc[0])):
     data_type = is_numeric_dtype(data.loc[0][n])
-    if data_type == True:#숫자형이면 그냥 넘어가기
+    if data_type == True:#if the data type is numeric the work just pass
         n+=1
     else:
         for i in range(len(data.loc[0])):
@@ -34,4 +33,4 @@ for n in range(len(data.loc[0])):
         n+=1
         print(data_dic)
 
-print(data.head(5))
+print(data.info())
